@@ -1,0 +1,6 @@
+endpoint: http://locahost:8080
+action:
+  framework: typescript-express
+  webhook: http://action-service:4000
+  handler_directory: service/app/controllers
+  routes_path: service/app/controllers/actions.controller.ts
