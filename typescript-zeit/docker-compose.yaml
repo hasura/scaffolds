@@ -20,9 +20,6 @@ services:
       # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
   action-service:
     build: ./service
-    labels:
-    - 'hasura.actions.handler_directory=service/api/'
-    - 'hasura.actions=true'
     ports:
     - "4000"
     environment:

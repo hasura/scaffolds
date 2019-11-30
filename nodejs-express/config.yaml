@@ -1,0 +1,6 @@
+action:
+  framework: nodejs-express
+  webhook: http://action-service:4000
+  handler_directory: service/src
+  routes_path: service/src/routes.js
+endpoint: http://locahost:8080
