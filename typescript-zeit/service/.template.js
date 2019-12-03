@@ -1,7 +1,3 @@
-const { codegen } = require('@graphql-codegen/core');
-const typescriptPlugin = require('@graphql-codegen/typescript');
-const { parse } = require('graphql');
-
 const routeTemplate = (mutationSdl, typesSdl) => {
   const mutationAst = parse(mutationSdl);
   const actionName = mutationAst.definitions[0].fields[0].name.value;
