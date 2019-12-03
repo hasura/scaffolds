@@ -71,18 +71,3 @@ export default requestHandler;
     })
 
 }
-
-handlerTemplate(
-  `type Mutation {
-  makePayment (
-    id: String
-  ): PaymentInfo
-}`,
-`type PaymentInfo {
-  payment_id : String
-}
-
-`
-).then(c => {
-  console.log(c)
-});
