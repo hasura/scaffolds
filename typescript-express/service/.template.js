@@ -1,7 +1,3 @@
-const { codegen } = require('@graphql-codegen/core');
-const typescriptPlugin = require('@graphql-codegen/typescript');
-const { parse } = require('graphql');
-
 const routeTemplate = (mutationSdl, typesSdl) => {
   const mutationAst = parse(mutationSdl);
   const actionName = mutationAst.definitions[0].fields[0].name.value;
@@ -71,18 +67,3 @@ export default requestHandler;
     })
 
 }
-
-handlerTemplate(
-  `type Mutation {
-  makePayment (
-    id: String
-  ): PaymentInfo
-}`,
-`type PaymentInfo {
-  payment_id : String
-}
-
-`
-).then(c => {
-  console.log(c)
-});
