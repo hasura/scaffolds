@@ -1,0 +1,5 @@
+action:
+  framework: typescript-zeit
+  webhook: http://localhost:4000/api
+  handler_directory: service/api
+endpoint: http://localhost:8080
